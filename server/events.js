@@ -39,6 +39,7 @@ const options = {
   apis: ['events.js'], // Your API routes file(s)
 };
 
+
 const specs = swaggerJsdoc(options);
 router.use('/api-docs', swaggerUi.serve);
 router.get('/api-docs', swaggerUi.setup(specs));
@@ -111,7 +112,7 @@ router.get('/api-docs', swaggerUi.setup(specs));
  * /events/add:
  *   post:
  *     summary: Create a new event
- *     description: Create a new event with virtual or physical details
+ *     description: Create a new event with virtual or physical details.
  *     tags: [Events]
  *     requestBody:
  *       required: true
@@ -134,6 +135,7 @@ router.get('/api-docs', swaggerUi.setup(specs));
  *             example:
  *               error: Invalid event type. Choose either virtual or physical.
  */
+
 
 router.post('/add', async (req, res) => {
   try {
